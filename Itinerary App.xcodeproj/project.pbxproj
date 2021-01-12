@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B846BA225AD8F110000D4E4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */; };
 		0B934F4025AC4AE000C8190E /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B934F3F25AC4AE000C8190E /* TripsViewController.storyboard */; };
 		0B934F4325AC4AFF00C8190E /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B934F4225AC4AFF00C8190E /* TripsViewController.swift */; };
+		0B934F4C25AC5CA900C8190E /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B934F4B25AC5CA900C8190E /* TripsTableViewCell.swift */; };
 		0B9E45BB259CF83C0017CDA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E45BA259CF83C0017CDA7 /* AppDelegate.swift */; };
 		0B9E45BD259CF83C0017CDA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E45BC259CF83C0017CDA7 /* SceneDelegate.swift */; };
 		0B9E45C4259CF8400017CDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9E45C3259CF8400017CDA7 /* Assets.xcassets */; };
@@ -19,8 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0B934F3F25AC4AE000C8190E /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		0B934F4225AC4AFF00C8190E /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		0B934F4B25AC5CA900C8190E /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		0B9E45B7259CF83C0017CDA7 /* Itinerary App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Itinerary App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9E45BA259CF83C0017CDA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B9E45BC259CF83C0017CDA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B846BA025AD8EE10000D4E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0B934F3D25AC4A8C00C8190E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 			children = (
 				0B934F3F25AC4AE000C8190E /* TripsViewController.storyboard */,
 				0B934F4225AC4AFF00C8190E /* TripsViewController.swift */,
+				0B934F4B25AC5CA900C8190E /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
@@ -79,6 +92,7 @@
 		0B9E45B9259CF83C0017CDA7 /* Itinerary App */ = {
 			isa = PBXGroup;
 			children = (
+				0B846BA025AD8EE10000D4E4 /* Extensions */,
 				0B934F3D25AC4A8C00C8190E /* Views */,
 				0BA6D4BB25A8E86600E358D1 /* Model */,
 				0B9E45BA259CF83C0017CDA7 /* AppDelegate.swift */,
@@ -180,9 +194,11 @@
 			files = (
 				0B934F4325AC4AFF00C8190E /* TripsViewController.swift in Sources */,
 				0BA6D4C425A8EB1500E358D1 /* Data.swift in Sources */,
+				0B846BA225AD8F110000D4E4 /* UIViewExtensions.swift in Sources */,
 				0BA6D4C125A8E8BE00E358D1 /* TripFunctions.swift in Sources */,
 				0B9E45BB259CF83C0017CDA7 /* AppDelegate.swift in Sources */,
 				0BA6D4BE25A8E8A400E358D1 /* TripModel.swift in Sources */,
+				0B934F4C25AC5CA900C8190E /* TripsTableViewCell.swift in Sources */,
 				0B9E45BD259CF83C0017CDA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
