@@ -25,6 +25,7 @@ class TripsTableViewCell: UITableViewCell {
     
     func setup(tripModel: TripModel) {
         titleLabel.text = tripModel.title
+        titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
     }
 
 }

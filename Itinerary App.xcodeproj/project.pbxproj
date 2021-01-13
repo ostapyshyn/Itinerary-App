@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B67832C25AF2ACD00C2FDC8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67832B25AF2ACD00C2FDC8 /* Theme.swift */; };
+		0B67832F25AF406D00C2FDC8 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B67832E25AF406C00C2FDC8 /* FugazOne-Regular.ttf */; };
+		0B67833325AF480100C2FDC8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B67833225AF480000C2FDC8 /* Colors.xcassets */; };
 		0B846BA225AD8F110000D4E4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */; };
 		0B934F4025AC4AE000C8190E /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B934F3F25AC4AE000C8190E /* TripsViewController.storyboard */; };
 		0B934F4325AC4AFF00C8190E /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B934F4225AC4AFF00C8190E /* TripsViewController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B67832B25AF2ACD00C2FDC8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0B67832E25AF406C00C2FDC8 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		0B67833225AF480000C2FDC8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0B934F3F25AC4AE000C8190E /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		0B934F4225AC4AFF00C8190E /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B67832A25AF2AA000C2FDC8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B67832B25AF2ACD00C2FDC8 /* Theme.swift */,
+				0B67832E25AF406C00C2FDC8 /* FugazOne-Regular.ttf */,
+				0B67833225AF480000C2FDC8 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0B846BA025AD8EE10000D4E4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		0B9E45B9259CF83C0017CDA7 /* Itinerary App */ = {
 			isa = PBXGroup;
 			children = (
+				0B67832A25AF2AA000C2FDC8 /* Resources */,
 				0B846BA025AD8EE10000D4E4 /* Extensions */,
 				0B934F3D25AC4A8C00C8190E /* Views */,
 				0BA6D4BB25A8E86600E358D1 /* Model */,
@@ -179,8 +196,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B67833325AF480100C2FDC8 /* Colors.xcassets in Resources */,
 				0B9E45C7259CF8400017CDA7 /* LaunchScreen.storyboard in Resources */,
 				0B9E45C4259CF8400017CDA7 /* Assets.xcassets in Resources */,
+				0B67832F25AF406D00C2FDC8 /* FugazOne-Regular.ttf in Resources */,
 				0B934F4025AC4AE000C8190E /* TripsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B67832C25AF2ACD00C2FDC8 /* Theme.swift in Sources */,
 				0B934F4325AC4AFF00C8190E /* TripsViewController.swift in Sources */,
 				0BA6D4C425A8EB1500E358D1 /* Data.swift in Sources */,
 				0B846BA225AD8F110000D4E4 /* UIViewExtensions.swift in Sources */,
