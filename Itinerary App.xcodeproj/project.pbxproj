@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6473BA25B44D7800D2F1DC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6473B925B44D7800D2F1DC /* UIButtonExtension.swift */; };
+		0B6473C125B4B5BE00D2F1DC /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6473C025B4B5BE00D2F1DC /* FloatingActionButton.swift */; };
 		0B67832C25AF2ACD00C2FDC8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67832B25AF2ACD00C2FDC8 /* Theme.swift */; };
 		0B67832F25AF406D00C2FDC8 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B67832E25AF406C00C2FDC8 /* FugazOne-Regular.ttf */; };
 		0B67833325AF480100C2FDC8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B67833225AF480000C2FDC8 /* Colors.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6473B925B44D7800D2F1DC /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		0B6473C025B4B5BE00D2F1DC /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		0B67832B25AF2ACD00C2FDC8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0B67832E25AF406C00C2FDC8 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 		0B67833225AF480000C2FDC8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				0B846BA125AD8F110000D4E4 /* UIViewExtensions.swift */,
+				0B6473B925B44D7800D2F1DC /* UIButtonExtension.swift */,
+				0B6473C025B4B5BE00D2F1DC /* FloatingActionButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B67832C25AF2ACD00C2FDC8 /* Theme.swift in Sources */,
+				0B6473BA25B44D7800D2F1DC /* UIButtonExtension.swift in Sources */,
 				0B934F4325AC4AFF00C8190E /* TripsViewController.swift in Sources */,
 				0BA6D4C425A8EB1500E358D1 /* Data.swift in Sources */,
 				0B846BA225AD8F110000D4E4 /* UIViewExtensions.swift in Sources */,
@@ -219,6 +226,7 @@
 				0B9E45BB259CF83C0017CDA7 /* AppDelegate.swift in Sources */,
 				0BA6D4BE25A8E8A400E358D1 /* TripModel.swift in Sources */,
 				0B934F4C25AC5CA900C8190E /* TripsTableViewCell.swift in Sources */,
+				0B6473C125B4B5BE00D2F1DC /* FloatingActionButton.swift in Sources */,
 				0B9E45BD259CF83C0017CDA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
