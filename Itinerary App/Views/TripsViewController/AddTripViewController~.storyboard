@@ -67,7 +67,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VRh-ET-9ow" kind="presentation" identifier="toAddTripSegue" id="xBo-tn-bLZ"/>
+                                    <segue destination="4RS-ii-GUm" kind="presentation" id="xBo-tn-bLZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,11 +89,18 @@
             </objects>
             <point key="canvasLocation" x="-210.1449275362319" y="139.28571428571428"/>
         </scene>
-        <!--AddTripViewController-->
-        <scene sceneID="Kpt-or-CFR">
+        <!--View Controller-->
+        <scene sceneID="zuP-tP-kwo">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddTripViewController" id="VRh-ET-9ow" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ja5-UG-1E1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4RS-ii-GUm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gP5-4C-n1l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GFS-yD-7C2"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4040893762290072" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJn-qp-mBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557" y="139"/>
         </scene>
