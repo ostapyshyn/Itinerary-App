@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,12 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lo0-Dl-RAO" customClass="PopupUIView" customModule="Itinerary_App" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="374" height="170"/>
+                                <rect key="frame" x="20" y="52" width="374" height="170"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4H-Kd-Xle">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPw-n3-uWU">
                                         <rect key="frame" x="8" y="8" width="358" height="36"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="Tint"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -49,8 +55,18 @@
                                             <action selector="save:" destination="4RS-ii-GUm" eventType="touchUpInside" id="xk3-e9-hvi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-YC-ayC">
+                                        <rect key="frame" x="308" y="8" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="Tint"/>
+                                        <state key="normal" image="cam"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="4RS-ii-GUm" eventType="touchUpInside" id="mjw-58-00u"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" name="Tint"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GFS-yD-7C2"/>
@@ -58,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="Gct-CI-g4E" id="DUR-np-RrG"/>
+                        <outlet property="imageView" destination="F4H-Kd-Xle" id="5h0-rm-R04"/>
                         <outlet property="saveButton" destination="V2w-3c-KAf" id="LXo-Io-3fP"/>
                         <outlet property="titleLabel" destination="jPw-n3-uWU" id="49C-Vm-bEa"/>
                         <outlet property="tripTextField" destination="CV1-5p-4v6" id="ojY-FJ-OzS"/>
@@ -69,6 +86,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cam" width="50" height="50"/>
+        <namedColor name="Tint">
+            <color red="1" green="0.18999999761581421" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
