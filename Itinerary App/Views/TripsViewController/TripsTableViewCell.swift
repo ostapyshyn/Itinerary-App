@@ -11,10 +11,12 @@ class TripsTableViewCell: UITableViewCell {
     
     @IBOutlet var cardView: UIView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var imageViewMain: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.addShadowAndRoundCorners()
+        imageViewMain.layer.cornerRadius = cardView.layer.cornerRadius
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,6 +28,7 @@ class TripsTableViewCell: UITableViewCell {
     func setup(tripModel: TripModel) {
         titleLabel.text = tripModel.title
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
+        imageViewMain.image = tripModel.image
     }
 
 }

@@ -22,6 +22,13 @@ class AddTripViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 24)
         imageView.layer.cornerRadius = 10
+        
+        // Dropshadow
+        titleLabel.layer.shadowOpacity = 1
+        titleLabel.layer.shadowColor = UIColor.white.cgColor
+        titleLabel.layer.shadowOffset = CGSize.zero
+        titleLabel.layer.shadowRadius = 5
+        
     }
     
     @IBAction func cancel(_ sender: UIButton) {
@@ -49,11 +56,18 @@ class AddTripViewController: UIViewController {
             return
         }
         
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
+        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
         if let doneSaving = doneSaving {
             doneSaving()
         }
         dismiss(animated: true)
+    }
+    
+    fileprivate func presentPhotoPickerController() {
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = .photoLibrary
+        self.present(myPickerController, animated: true, completion: nil)
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
@@ -62,26 +76,37 @@ class AddTripViewController: UIViewController {
                 switch status {
                 case .authorized:
                     DispatchQueue.main.async {
-                        let myPickerController = UIImagePickerController()
-                        myPickerController.delegate = self
-                        myPickerController.sourceType = .photoLibrary
-                        self.present(myPickerController, animated: true, completion: nil)
+                        self.presentPhotoPickerController()
                     }
                     
-                default:
+                case .notDetermined:
+                    if status == PHAuthorizationStatus.authorized {
+                        self.presentPhotoPickerController()
+                    }
+                case .restricted:
+                    let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo library access is restricted and cannot be accessed", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                case .denied:
+                    let alert = UIAlertController(title: "Photo Library Denied", message: "Photo library access was previously denied. Please check your settings.", preferredStyle: .alert)
+                    let gotoSettings = UIAlertAction(title: "Go to settings", style: .default) { action in
+                        DispatchQueue.main.async {
+                            let url = URL(string: UIApplication.openSettingsURLString)!
+                            UIApplication.shared.open(url, options: [:])
+                        }
+                    }
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                    alert.addAction(gotoSettings)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                case .limited:
                     break
-                //                case .notDetermined:
-                //
-                //                case .restricted:
-                //
-                //                case .denied:
-                //
-                //                case .limited:
-                //
-                //                @unknown default:
-                //
-                //                }
+                @unknown default:
+                    break
                 }
+                
             }
             
         }

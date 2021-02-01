@@ -12,6 +12,8 @@ class TripsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addButton: FloatingActionButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
