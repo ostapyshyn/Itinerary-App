@@ -89,4 +89,18 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         //delete.backgroundColor = .blue // color of delete button
         return UISwipeActionsConfiguration(actions: [delete])
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view,   actionPerformed: @escaping (Bool) -> ()) in
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
+            actionPerformed(true)
+            
+            
+        }
+        edit.image = UIImage(systemName: "pencil")
+        edit.backgroundColor = UIColor(named: "Edit")
+        
+        
+        return UISwipeActionsConfiguration(actions: [edit])
+    }
 }
