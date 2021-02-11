@@ -29,6 +29,17 @@ class TripsTableViewCell: UITableViewCell {
         titleLabel.text = tripModel.title
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
         imageViewMain.image = tripModel.image
+        
+        if let tripImage = tripModel.image {
+            imageViewMain?.alpha = 0.3
+            imageViewMain?.image = tripImage
+            
+            UIView.animate(withDuration: 1) {
+                self.imageViewMain.alpha = 1
+            }
+        }
+        
+        
     }
 
 }

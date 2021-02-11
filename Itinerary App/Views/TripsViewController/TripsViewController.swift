@@ -12,10 +12,13 @@ class TripsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addButton: FloatingActionButton!
     
+    var tripIndexToEdit: Int?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -39,9 +42,11 @@ class TripsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue" {
             let popup = segue.destination as! AddTripViewController
+            popup.tripIndexToEdit = tripIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
 }
@@ -92,6 +97,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view,   actionPerformed: @escaping (Bool) -> ()) in
+            self.tripIndexToEdit = indexPath.row
             self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
             actionPerformed(true)
             
